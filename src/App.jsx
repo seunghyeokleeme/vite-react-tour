@@ -1,11 +1,12 @@
-import Button from "./Button";
-import classes from "./App.module.css";
+import { useState } from "react";
 
 function App() {
+  const [counter, setValue] = useState(0);
+  const onClick = () => setValue((prev) => prev + 1);
   return (
     <div>
-      <h1 className={classes.title}>Welcome back React.js!!!</h1>
-      <Button text={"Continue"} />
+      <h1>{counter}</h1>
+      <button onClick={onClick}>Click me</button>
     </div>
   );
 }
