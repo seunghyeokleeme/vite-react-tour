@@ -4,11 +4,7 @@ import Detail from "./routes/Detail";
 
 const router = createBrowserRouter([
   {
-    path: "/hello",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "/movie",
+    path: "/movie/:movieId",
     element: <Detail />,
   },
   {
